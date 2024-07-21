@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.0">
+ <file name="C:\Users\Administrator\IdeaProjects\01TechnicalTest\src\main\scala\data\engineering\skew\SaltSkew.scala">
+  <error line="1" source="org.scalastyle.file.HeaderMatchesChecker" severity="warning" message="Header does not match expected text"/>
+  <error column="74" line="48" source="org.scalastyle.scalariform.MagicNumberChecker" severity="warning" message="Magic Number"/>
+  <error column="21" line="18" source="org.scalastyle.file.RegexChecker" severity="warning" message="Regular expression matched 'println'"/>
+  <error column="23" line="29" source="org.scalastyle.file.RegexChecker" severity="warning" message="Regular expression matched 'println'"/>
+  <error column="39" line="60" source="org.scalastyle.scalariform.MultipleStringLiteralsChecker" severity="warning" message="The string literal &quot;geographical_location_oid&quot; appears 4 times in the file."/>
+  <error column="87" line="60" source="org.scalastyle.scalariform.MultipleStringLiteralsChecker" severity="warning" message="The string literal &quot;item_name&quot; appears 4 times in the file."/>
+ </file>
+ <file name="C:\Users\Administrator\IdeaProjects\01TechnicalTest\src\main\scala\data\engineering\Main.scala">
+  <error line="1" source="org.scalastyle.file.HeaderMatchesChecker" severity="warning" message="Header does not match expected text"/>
+  <error column="12" line="23" source="org.scalastyle.file.RegexChecker" severity="warning" message="Regular expression matched 'println'"/>
+  <error column="14" line="34" source="org.scalastyle.file.RegexChecker" severity="warning" message="Regular expression matched 'println'"/>
+  <error column="6" line="81" source="org.scalastyle.scalariform.MethodLengthChecker" severity="warning" message="Method is longer than 50 lines"/>
+  <error column="37" line="56" source="org.scalastyle.scalariform.MultipleStringLiteralsChecker" severity="warning" message="The string literal &quot;geographical_location_oid&quot; appears 4 times in the file."/>
+  <error column="85" line="56" source="org.scalastyle.scalariform.MultipleStringLiteralsChecker" severity="warning" message="The string literal &quot;item_name&quot; appears 4 times in the file."/>
+ </file>
+ <file name="C:\Users\Administrator\IdeaProjects\01TechnicalTest\src\test\scala\Tests.scala">
+  <error line="1" source="org.scalastyle.file.HeaderMatchesChecker" severity="warning" message="Header does not match expected text"/>
+  <error column="10" line="28" source="org.scalastyle.scalariform.MagicNumberChecker" severity="warning" message="Magic Number"/>
+  <error column="31" line="33" source="org.scalastyle.scalariform.MagicNumberChecker" severity="warning" message="Magic Number"/>
+  <error column="31" line="34" source="org.scalastyle.scalariform.MagicNumberChecker" severity="warning" message="Magic Number"/>
+  <error column="31" line="35" source="org.scalastyle.scalariform.MagicNumberChecker" severity="warning" message="Magic Number"/>
+  <error column="31" line="36" source="org.scalastyle.scalariform.MagicNumberChecker" severity="warning" message="Magic Number"/>
+  <error column="4" line="15" source="org.scalastyle.scalariform.UnderscoreImportChecker" severity="warning" message="Avoid wildcard imports"/>
+  <error column="14" line="25" source="org.scalastyle.scalariform.MultipleStringLiteralsChecker" severity="warning" message="The string literal &quot;item1&quot; appears 6 times in the file."/>
+  <error column="14" line="39" source="org.scalastyle.scalariform.MultipleStringLiteralsChecker" severity="warning" message="The string literal &quot;A&quot; appears 3 times in the file."/>
+  <error column="18" line="47" source="org.scalastyle.scalariform.MultipleStringLiteralsChecker" severity="warning" message="The string literal &quot;item_name&quot; appears 3 times in the file."/>
+  <error column="4" line="15" source="org.scalastyle.scalariform.ImportGroupingChecker" severity="warning" message="Imports should be grouped together"/>
+ </file>
+</checkstyle>

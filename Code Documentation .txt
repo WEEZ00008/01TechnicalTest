@@ -1,0 +1,51 @@
+Documentation for Main Object in Scala with Apache Spark: 
+SDK version: openlogic-openjdk-11.0.22
+Scala version: 2.12.1
+Spark version: 3.3.1
+Build tool version: Maven 3.6.0
+
+Project Structure: 
+src/main/scala/data/engineering/Main.scala: 
+- Contains the Scala source file for the application (TopXConfiguration function). 
+
+src/main/scala/data/engineering/skew/SaltSkew.scala: 
+- Contains the Scala source file for the application (saltRDD function)
+
+src/test/scala/Tests.scala/: 
+- Contains test cases for the application 
+
+To run code, run the Main.scala file with the following inputs:
+Main <inputPath1> <inputPath2> <outputPath> <top X display>
+
+inputPath1: Path to the parquet file for Dataset A
+inputPath2: Path to the parquet file for Dataset B
+onputPath:  Path to the output file 
+top X display: The number of top items to be displayed
+
+
+Code Design Considerations
+1) Modularity:
+The code is broken down into smaller functions, each handling a specific task (removeDuplicates, itemCount, topXConfiguration). There is increased readability, maintainability, and reusability.
+
+2) Error Handling:
+The program checks if the correct number of arguments are provided. If not, it prints a usage message and exits. Conversion of the top X configuration value from a string to an integer is wrapped in a try-catch block to handle NumberFormatException.
+
+3) Scalability:
+The use of RDD transformations like map, flatMap, distinct, and reduceByKey ensures that the code can handle large datasets distributed across a cluster.
+
+4) Performance:
+RDD operations such as cogroup and reduceByKey are used efficiently to minimise shuffling and optimise performance.
+
+5)Output Schema Definition:
+The schema for the output DataFrame is defined explicitly to ensure the data is correctly structured and typed when written to the Parquet file.
+
+Overall Time Complexity: The most significant operations are cogroup, reduceByKey, and groupByKey, all of which have a time complexity of O(n log n). Thus, the overall time complexity for the topXConfiguration function is O(n log n).
+Overall Space Complexity: Each stage of the process holds intermediate data of size O(n), so the overall space complexity is still O(n).
+
+
+Spark Configurations
+1) master: Set to local[*], which means the code will run locally utilizing all available cores. 
+2) SparkConf is used to configure the Spark application.
+3) SparkContext is the entry point to Spark functionalities.
+4) The code sets a default number of partitions to 5. For larger datasets or different cluster configurations, this value can be adjusted for optimal performance.
+5) The output DataFrame is written to a Parquet file using write.parquet(outputPath), ensuring the results are saved in a columnar storage format optimised for performance.
